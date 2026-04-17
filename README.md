@@ -6,7 +6,7 @@
 ---
 
 ## Visão Geral do Desafio
-Iniciei minha jornada como observador da experiência do usuário no projeto NaSalinha. Meu objetivo é realizar uma auditoria completa para identificar falhas de segurança, erros de interface e inconsistências nas regras de negócio, atuando em correções antes do deploy.
+Iniciei minha trilha como observador da experiência do usuário no projeto NaSalinha. Meu objetivo é realizar uma auditoria completa para identificar falhas de segurança, erros de interface e inconsistências nas regras de negócio, atuando em correções antes do deploy.
 
 ---
 
