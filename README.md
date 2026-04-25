@@ -5,7 +5,7 @@ Este projeto tem como objetivo realizar uma auditoria completa de qualidade, doc
 
 ---
 
-## 📌 Sobre o Projeto
+## Sobre o Projeto
 
 **NaSalinha** é um sistema web voltado para check-in por foto, autenticação JWT e sistema de pontos.  
 Este repositório contém toda a documentação e evidências de testes realizados durante o desafio de QA.
