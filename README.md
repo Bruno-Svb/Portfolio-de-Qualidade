@@ -1,4 +1,4 @@
-# 🛡️ Portfólio de Qualidade – Desafio QA 2026
+# Portfólio de Qualidade – Desafio QA 2026
 
 Bem-vindo(a) ao meu repositório de testes do sistema **NaSalinha**.  
 Este projeto tem como objetivo realizar uma auditoria completa de qualidade, documentando bugs, planejando casos de teste e validando funcionalidades essenciais da aplicação.
@@ -12,7 +12,7 @@ Este repositório contém toda a documentação e evidências de testes realizad
 
 ---
 
-## 🧪 Tecnologias e Ferramentas
+## Tecnologias e Ferramentas
 
 | Área                | Ferramenta                      |
 |---------------------|----------------------------------|
@@ -24,7 +24,7 @@ Este repositório contém toda a documentação e evidências de testes realizad
 
 ---
 
-## 🚀 Como Rodar o Projeto Localmente
+## Como Rodar o Projeto Localmente
 
 ```bash
 # 1. Clone o repositório
