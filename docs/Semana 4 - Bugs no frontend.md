@@ -7,9 +7,9 @@
 
 | ID | Título | Área | CT | Severidade | Status |
 |----|--------|------|-----|------------|--------|
-| BUG-01 | Login sem verificar e-mail | JWT | CT-03 | 🔴 Crítica | Aberto |
+| BUG-01 | Login sem verificar e-mail | JWT | CT-03 | 🟠 Alta | Aberto |
 | BUG-02 | Múltiplos check-ins no mesmo dia | Check-in | CT-08 | 🟠 Alta | Aberto |
-| BUG-03 | Pontos sem aprovação do Admin | Pontos | CT-12 | 🔴 Crítica | Aberto |
+| BUG-03 | Pontos sem aprovação do Admin | Pontos | CT-12 | 🟠 Alta | Aberto |
 
 
 # BUG-01 – E-mail de verificação não é enviado + Login sem verificação
@@ -18,7 +18,7 @@
 |-------|---------|
 | Título | Sistema não envia e-mail de verificação e permite login mesmo sem conta verificada |
 | Localização do Erro | Backend (envio de e-mail) / Backend (validação de status) |
-| Severidade | 🔴 Crítica |
+| Severidade | 🟠 Alta |
 | CT Relacionado | CT-03 |
 
 ---
@@ -148,7 +148,7 @@ O endpoint POST /api/checkins não está verificando se já existe um check-in d
 |-------|---------|
 | Título | Check-in com status PENDENTE está contabilizando pontos no ranking automaticamente |
 | Localização do Erro | Backend (Service de Pontuação) / Lógica de negócio |
-| Severidade | 🔴 Crítica |
+| Severidade | 🟠 Alta |
 | CT Relacionado | CT-12 |
 
 
@@ -205,8 +205,8 @@ O sistema está somando pontos no momento da criação do check-in (POST /api/ch
 
 | Severidade | Quantidade | Bugs |
 |------------|------------|------|
-| 🔴 Crítica | 2 | BUG-01, BUG-03 |
-| 🟠 Alta | 1 | BUG-02 |
+| 🔴 Crítica | 0 | - |
+| 🟠 Alta | 3 | BUG-01, BUG-02, BUG-03 |
 | 🟡 Média | 0 | - |
 | 🟢 Baixa | 0 | - |
 
