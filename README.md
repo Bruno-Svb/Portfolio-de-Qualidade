@@ -54,7 +54,7 @@ A manutenção atual e a coordenação deste desafio são de responsabilidade da
 | Testes de API       | Insomnia                         |
 | Testes de Interface | Navegador (Chrome)               |
 | Gestão de Testes    | Trello                           |
-| Documentação        | PDF, Planilhas                   |
+| Documentação        | Markdowns, Planilhas             |
 | Ambiente            | Docker + Docker Compose          |
 
 ---
