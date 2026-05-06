@@ -16,7 +16,7 @@ Atuar como a **última linha de defesa** antes do deploy em produção:
 
 - 🐛 **Mapear Bugs:** Encontrar falhas de segurança, erros de pontuação e problemas de interface.
 - ⚙️ **Configuração de Infra:** Garantir que todos os serviços externos estejam integrados corretamente.
-- 📋 **Validar Regras de Negócio:** Garantir que permissões de usuário (Admin vs Trainee) e cálculos de ranking estejam íntegros.
+- 📋 **Validar Regras de Negócio:** Garantir que permissões de usuário (Admin, Membro e Trainee) e cálculos de ranking estejam íntegros.
 
 ### Níveis de Usuário
 
