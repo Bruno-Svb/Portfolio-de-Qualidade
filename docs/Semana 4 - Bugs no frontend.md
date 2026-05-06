@@ -48,7 +48,7 @@
 
 ## Resultado Atual
 
-- **Nenhum e-mail chega ao Mailtrap**
+- Apenas e-mail de conta confirmada chega ao Mailtrap
 - Apesar disso, o login é realizado com **sucesso**
 - Usuário é redirecionado para a área logada (dashboard)
 - Nenhuma mensagem de erro é exibida
@@ -58,26 +58,13 @@
 
 ## Análise de Causa Raiz (RCA)
 
-**Hipótese 1 – E-mail não enviado:**
-O serviço de envio de e-mail (Nodemailer + Mailtrap) pode estar:
- 
-- a) **Código de envio ausente:** A função `sendVerificationEmail()` pode não estar sendo chamada após o registro
-- b) **Erro silencioso:** O envio pode estar falhando mas o erro não está sendo logado (try/catch vazio)
-- c) **Configuração de webhook:** O Mailtrap pode precisar de configuração adicional
-
-**Hipótese 2 – Login sem verificação:**
-Mesmo que o e-mail não seja enviado (ou não seja verificado), o endpoint `POST /api/auth/login` não está verificando o campo `status` do usuário antes de gerar o token JWT.
-
-
-## Análise de Causa Raiz (RCA)
-
 Hipótese: Falha no Backend (mais provável):
 O endpoint POST /api/auth/login não está verificando o campo status do usuário antes de gerar o token JWT. O controller de autenticação provavelmente está validando apenas e-mail e senha (autenticação), mas não está checando se a conta está ativa (autorização). A validação if (user.status !== 'ACTIVE') está ausente ou comentada.
 
 
 ## Impacto
 
-- 🚨 Dupla falha de segurança: E-mail não enviado + login permitido = verificação inútil
+- 🚨 Dupla falha de segurança: E-mail não enviado e login permitido resulta em verificação inútil
 - 📧 Fluxo de verificação completamente quebrado: O sistema não envia o e-mail e também não exige a verificação
 - 👻 Contas fantasmas: Qualquer pessoa pode criar infinitas contas sem e-mail real
 - 🛡️ RF-01 e RF-02 violados: O sistema deveria enviar e-mail E bloquear contas não verificadas
