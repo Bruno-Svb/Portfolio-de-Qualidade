@@ -8,8 +8,8 @@
 | ID | Título | Área | CT | Severidade | Status |
 |----|--------|------|-----|------------|--------|
 | BUG-04 | Check-in permite envio de foto duplicada via API | Check-in | CT-09 | 🟠 Alta | Aberto |
-| BUG-05 | Remoção de check-in não subtrai pontos do usuário | Pontos | CT-14 | 🔴 Crítica | Aberto |
-| BUG-06 | Exclusão de check-in não atualiza tabela de pontos | Pontos | CT-15 | 🔴 Crítica | Aberto |
+| BUG-05 | Remoção de check-in não subtrai pontos do usuário | Pontos | CT-14 | 🟠 Alta | Aberto |
+| BUG-06 | Exclusão de check-in não atualiza tabela de pontos | Pontos | CT-15 | 🟠 Alta | Aberto |
 | BUG-07 | Membro não consegue visualizar ranking | Pontos | CT-17 | 🟠 Alta | Aberto |
 
 
