@@ -1,0 +1,886 @@
+﻿{
+  "type": "collection.insomnia.rest/5.0",
+  "schema_version": "5.1",
+  "name": "Desafio QA - NaSalinha",
+  "meta": {
+    "id": "wrk_c4f655f30a384087b8fd7b815b1215ba",
+    "created": 1777132975806,
+    "modified": 1777132994746,
+    "description": ""
+  },
+  "collection": [
+    {
+      "name": "Criação de usuário",
+      "meta": {
+        "id": "fld_cd7c923c86fa4860bb8f016c6ea9f106",
+        "created": 1777134165002,
+        "modified": 1777136802775,
+        "sortKey": -1777136794517,
+        "description": ""
+      },
+      "children": [
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/register",
+          "name": "Registro de usuário - Membro",
+          "meta": {
+            "id": "req_7470fd6a1c4a475db4fc06ab3d075885",
+            "created": 1777133779309,
+            "modified": 1778466374733,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134176648
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"name\": \"Bruno Teste\",\n  \"email\": \"bruno@email.com\",\n  \"password\": \"senha123\",\n\t\"role\": \"MEMBER\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/register",
+          "name": "Registro sem email",
+          "meta": {
+            "id": "req_e91aaa3343634b34931d50e6f5f0a7c1",
+            "created": 1777135561037,
+            "modified": 1777136342068,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134176616.75
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"name\": \"Jonas Silva\",\n  \"email\": \"\",\n  \"password\": \"senha123\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/register",
+          "name": "Registro sem nome",
+          "meta": {
+            "id": "req_c656035417694bffb376adcb0e623ead",
+            "created": 1777135616338,
+            "modified": 1778466013554,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134176623
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"name\": \"\",\n  \"email\": \"jonas@email.com\",\n  \"password\": \"senha123\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/register",
+          "name": "Registro sem senha",
+          "meta": {
+            "id": "req_641b7fb7f5b1493ab9965b18eb68a913",
+            "created": 1777135639126,
+            "modified": 1777136335243,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134176610.5
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"name\": \"Jonas Silva\",\n  \"email\": \"jonas@email.com\",\n  \"password\": \"\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/register",
+          "name": "Registro de usuário email já utilizado",
+          "meta": {
+            "id": "req_b9daa80c9acd445ab6a4e235e8457ae9",
+            "created": 1777135846414,
+            "modified": 1777135913090,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134176641.75
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"name\": \"Bruno Teste\",\n  \"email\": \"bruno@email.com\",\n  \"password\": \"senha123\",\n\t\"role\": \"TRAINEE\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/register",
+          "name": "Registro de usuário - Trainee",
+          "meta": {
+            "id": "req_f61fb1d2423b4aca9702368d9100cfc0",
+            "created": 1778466360738,
+            "modified": 1778466396186,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134176644.875
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"name\": \"Bruno Teste\",\n  \"email\": \"carlos@email.com\",\n  \"password\": \"senha123\",\n\t\"role\": \"TRAINEE\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/register",
+          "name": "Registro de usuário - Admin",
+          "meta": {
+            "id": "req_0fdc06397f0342a085ca8c7337224c74",
+            "created": 1778469050471,
+            "modified": 1778469075309,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134176643.3125
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"name\": \"Administrador\",\n  \"email\": \"admin1@email.com\",\n  \"password\": \"senha123\",\n\t\"role\": \"ADMIN\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Login",
+      "meta": {
+        "id": "fld_d63b5c0faec04c52a1889dfe614b119f",
+        "created": 1777134209898,
+        "modified": 1777136816912,
+        "sortKey": -1777136309900.9375,
+        "description": ""
+      },
+      "children": [
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/login",
+          "name": "Sem email",
+          "meta": {
+            "id": "req_f22d694c7b8243678d380eed772814d4",
+            "created": 1777134219407,
+            "modified": 1777134508082,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134219407
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n\t\"name\": \"Bruno Teste\",\n\t\"password\": \"senha123\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/login",
+          "name": "Login de usuário",
+          "meta": {
+            "id": "req_b626df21b77745dcb0668356fea074d9",
+            "created": 1777134409004,
+            "modified": 1777134468590,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134409004
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n\t\"email\": \"bruno@email.com\",\n\t\"password\": \"senha123\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/login",
+          "name": "Email não cadastrado",
+          "meta": {
+            "id": "req_8803a10dd25f4fbabbabf7f6ff3b0bde",
+            "created": 1777134498801,
+            "modified": 1777134555914,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134198027.5
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n\t\"email\": \"emailerrado@email.com\",\n\t\"password\": \"senha123\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/login",
+          "name": "Senha incorreta",
+          "meta": {
+            "id": "req_f0061a1066754acfbccd420fb58dcd78",
+            "created": 1777134577993,
+            "modified": 1777134599797,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134197927.5
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n\t\"email\": \"bruno@email.com\",\n\t\"password\": \"senha12345\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Check-in por foto",
+      "meta": {
+        "id": "fld_db02a68db299426f8c4c9e99c6c01b31",
+        "created": 1777136794417,
+        "modified": 1778469566787,
+        "sortKey": -1777136188746.9219,
+        "description": ""
+      },
+      "children": [
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/checkins",
+          "name": "Check-in sem foto",
+          "meta": {
+            "id": "req_c4c8fd1f15584cc9b03c0551832ad2ea",
+            "created": 1777136827021,
+            "modified": 1778071634511,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777135618965
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "multipart/form-data",
+            "params": [
+              {
+                "name": "photo",
+                "value": "img",
+                "description": "",
+                "disabled": false,
+                "multiline": true,
+                "type": "file"
+              }
+            ]
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "multipart/form-data"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYWViMDVjYi1iNmY5LTQ0ZDAtYTFjMC1lMzczNWM1ZGNkNzkiLCJpYXQiOjE3NzgwNzE0MjEsImV4cCI6MTc3ODA3NTAyMX0._TT4l1k3nqbejaPZgmExApyJ_Sh4bBG9VbCc2Dif-ws",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/checkins",
+          "name": "Check-in diário",
+          "meta": {
+            "id": "req_c37af1ed44e247f8b4bd4c6834af89f2",
+            "created": 1777137154915,
+            "modified": 1778469459485,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777135619065
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "multipart/form-data",
+            "params": [
+              {
+                "name": "photo",
+                "value": "",
+                "description": "",
+                "disabled": false,
+                "fileName": "C:\\Users\\bruno\\Downloads\\testedefoto1.jpg",
+                "type": "file"
+              }
+            ]
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "multipart/form-data"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYWViMDVjYi1iNmY5LTQ0ZDAtYTFjMC1lMzczNWM1ZGNkNzkiLCJpYXQiOjE3Nzg0NjYxNzYsImV4cCI6MTc3ODQ2OTc3Nn0.dtD5JDTjkomo7tKAfV1M1SMr34IEZ5FIb43ZrEfboR0",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/checkins",
+          "name": "Check-in duplicado",
+          "meta": {
+            "id": "req_5556090750f54759aaa7bd5617c64b45",
+            "created": 1778466112370,
+            "modified": 1778466199243,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777135619015
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "multipart/form-data",
+            "params": [
+              {
+                "name": "photo",
+                "value": "",
+                "description": "",
+                "disabled": false,
+                "fileName": "C:\\Users\\bruno\\Downloads\\testedefoto1.jpg",
+                "type": "file"
+              }
+            ]
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "multipart/form-data"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYWViMDVjYi1iNmY5LTQ0ZDAtYTFjMC1lMzczNWM1ZGNkNzkiLCJpYXQiOjE3Nzg0NjYxNzYsImV4cCI6MTc3ODQ2OTc3Nn0.dtD5JDTjkomo7tKAfV1M1SMr34IEZ5FIb43ZrEfboR0",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/checkins/02393ad0-1e56-47da-b643-2bd5d048bdcd",
+          "name": "Check-in para outro usuário",
+          "meta": {
+            "id": "req_7705f8adc68641cbbd1c3e639871cc5c",
+            "created": 1778467365927,
+            "modified": 1778467392111,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777135618990
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "multipart/form-data",
+            "params": [
+              {
+                "name": "photo",
+                "value": "",
+                "description": "",
+                "disabled": false,
+                "fileName": "C:\\Users\\bruno\\Downloads\\testedefoto1.jpg",
+                "type": "file"
+              }
+            ]
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "multipart/form-data"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYWViMDVjYi1iNmY5LTQ0ZDAtYTFjMC1lMzczNWM1ZGNkNzkiLCJpYXQiOjE3Nzg0NjYxNzYsImV4cCI6MTc3ODQ2OTc3Nn0.dtD5JDTjkomo7tKAfV1M1SMr34IEZ5FIb43ZrEfboR0",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/checkins/d56f13eb-a738-4a30-960b-6be391eb482f",
+          "name": "Remoção de check-in",
+          "meta": {
+            "id": "req_fc9526dfbf3d413ab97cd6277542fca4",
+            "created": 1778467459558,
+            "modified": 1778469468055,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777135013984.5
+          },
+          "method": "DELETE",
+          "body": {
+            "mimeType": "multipart/form-data",
+            "params": [
+              {
+                "name": "photo",
+                "value": "img",
+                "description": "",
+                "disabled": false,
+                "multiline": true,
+                "fileName": "C:\\Users\\bruno\\Downloads\\testedefoto1.jpg",
+                "type": "file"
+              }
+            ]
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "multipart/form-data"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg0NjkwODAsImV4cCI6MTc3ODQ3MjY4MH0.BcxWRldxiq2yCajjcsdgcjox-zVRA5EHuSIQQtGi1h4",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ranking",
+      "meta": {
+        "id": "fld_7d6741e664b140468a43d541e5ffdd14",
+        "created": 1778469548735,
+        "modified": 1778469563124,
+        "sortKey": -1777136067592.9062,
+        "description": ""
+      },
+      "children": [
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/rankings",
+          "name": "Consultar ranking - Admin",
+          "meta": {
+            "id": "req_6b6980055f5547f6bcfffd777939f2dd",
+            "created": 1778469570323,
+            "modified": 1778470283377,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1778469570323
+          },
+          "method": "GET",
+          "headers": [
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg0NjkwODAsImV4cCI6MTc3ODQ3MjY4MH0.BcxWRldxiq2yCajjcsdgcjox-zVRA5EHuSIQQtGi1h4",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/rankings",
+          "name": "Consultar ranking - Membro",
+          "meta": {
+            "id": "req_cbf6ecda790f44c3bd7a161f8ffa942c",
+            "created": 1778470291629,
+            "modified": 1778470328428,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777802594694
+          },
+          "method": "GET",
+          "headers": [
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYWViMDVjYi1iNmY5LTQ0ZDAtYTFjMC1lMzczNWM1ZGNkNzkiLCJpYXQiOjE3NzgwNzE0MjEsImV4cCI6MTc3ODA3NTAyMX0._TT4l1k3nqbejaPZgmExApyJ_Sh4bBG9VbCc2Dif-ws",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/rankings",
+          "name": "Consultar ranking - Trainee",
+          "meta": {
+            "id": "req_d5c58bec94414e4186038cc9da2f2c23",
+            "created": 1778470350558,
+            "modified": 1778470355146,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777469106879.5
+          },
+          "method": "GET",
+          "headers": [
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwMjM5M2FkMC0xZTU2LTQ3ZGEtYjY0My0yYmQ1ZDA0OGJkY2QiLCJpYXQiOjE3Nzg0NjYzOTgsImV4cCI6MTc3ODQ2OTk5OH0.5h_JnslPf5chA48omHHdD3hvncsDwTKBO5hA40FkYPw",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        }
+      ]
+    }
+  ],
+  "cookieJar": {
+    "name": "Default Jar",
+    "meta": {
+      "id": "jar_926d0682c4503b4e659bf9cec192fa35a48aaaf3",
+      "created": 1777132975808,
+      "modified": 1777132975808
+    }
+  },
+  "environments": {
+    "name": "Base Environment",
+    "meta": {
+      "id": "env_926d0682c4503b4e659bf9cec192fa35a48aaaf3",
+      "created": 1777132975807,
+      "modified": 1777133848250,
+      "isPrivate": false
+    },
+    "data": {
+      "NaSalinha": {
+        "base_url": "http://localhost:5001"
+      }
+    }
+  }
+}
