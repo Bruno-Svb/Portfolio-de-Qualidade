@@ -25,10 +25,10 @@
           "meta": {
             "id": "req_7470fd6a1c4a475db4fc06ab3d075885",
             "created": 1777133779309,
-            "modified": 1778466374733,
+            "modified": 1778876730490,
             "isPrivate": false,
             "description": "",
-            "sortKey": -1777134176648
+            "sortKey": -1777134176645.6562
           },
           "method": "POST",
           "body": {
@@ -259,10 +259,10 @@
           "meta": {
             "id": "req_0fdc06397f0342a085ca8c7337224c74",
             "created": 1778469050471,
-            "modified": 1778469075309,
+            "modified": 1778876728753,
             "isPrivate": false,
             "description": "",
-            "sortKey": -1777134176643.3125
+            "sortKey": -1777134176646.4375
           },
           "method": "POST",
           "body": {
@@ -310,7 +310,7 @@
           "meta": {
             "id": "req_f22d694c7b8243678d380eed772814d4",
             "created": 1777134219407,
-            "modified": 1777134508082,
+            "modified": 1778876590619,
             "isPrivate": false,
             "description": "",
             "sortKey": -1777134219407
@@ -345,14 +345,14 @@
         },
         {
           "url": "{{ _.NaSalinha.base_url }}/api/auth/login",
-          "name": "Login de usuário",
+          "name": "Login de usuário - Membro",
           "meta": {
             "id": "req_b626df21b77745dcb0668356fea074d9",
             "created": 1777134409004,
-            "modified": 1777134468590,
+            "modified": 1778876735587,
             "isPrivate": false,
             "description": "",
-            "sortKey": -1777134409004
+            "sortKey": -1777134337905.125
           },
           "method": "POST",
           "body": {
@@ -459,6 +459,123 @@
             },
             "rebuildPath": true
           }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/login",
+          "name": "Login de usuário - Trainee",
+          "meta": {
+            "id": "req_9c0ca95c6d834ce192d40b280d2ce632",
+            "created": 1778876444174,
+            "modified": 1778876459600,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134314205.5
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n\t\"email\": \"carlos@email.com\",\n\t\"password\": \"senha123\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/login",
+          "name": "Login de usuário - Admin",
+          "meta": {
+            "id": "req_2e0a0c05a1394ac3aef58273e9b9fd85",
+            "created": 1778876486734,
+            "modified": 1778876734176,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134361604.75
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n\t\"email\": \"admin1@email.com\",\n\t\"password\": \"senha123\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/auth/login",
+          "name": "Sem senha",
+          "meta": {
+            "id": "req_7629e2efbbd54d069bce3815804da3c2",
+            "created": 1778876548341,
+            "modified": 1778876595485,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1777134208717.25
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n\t\"email\": \"admin1@email.com\",\n\t\"password\": \"\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
         }
       ]
     },
@@ -531,7 +648,7 @@
           "meta": {
             "id": "req_c37af1ed44e247f8b4bd4c6834af89f2",
             "created": 1777137154915,
-            "modified": 1778469459485,
+            "modified": 1778876983049,
             "isPrivate": false,
             "description": "",
             "sortKey": -1777135619065
@@ -564,7 +681,7 @@
           ],
           "authentication": {
             "type": "bearer",
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYWViMDVjYi1iNmY5LTQ0ZDAtYTFjMC1lMzczNWM1ZGNkNzkiLCJpYXQiOjE3Nzg0NjYxNzYsImV4cCI6MTc3ODQ2OTc3Nn0.dtD5JDTjkomo7tKAfV1M1SMr34IEZ5FIb43ZrEfboR0",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYWViMDVjYi1iNmY5LTQ0ZDAtYTFjMC1lMzczNWM1ZGNkNzkiLCJpYXQiOjE3Nzg4NzY5NjYsImV4cCI6MTc3ODg4MDU2Nn0.o7heG3pQkNJbx6QRptK_srTi8y5Cg291i1Q3SnDjQG0",
             "prefix": "Bearer"
           },
           "settings": {
@@ -685,12 +802,12 @@
           }
         },
         {
-          "url": "{{ _.NaSalinha.base_url }}/api/checkins/d56f13eb-a738-4a30-960b-6be391eb482f",
+          "url": "{{ _.NaSalinha.base_url }}/api/checkins/d3d9c30e-fdf6-411a-9a84-79f45eca9262",
           "name": "Remoção de check-in",
           "meta": {
             "id": "req_fc9526dfbf3d413ab97cd6277542fca4",
             "created": 1778467459558,
-            "modified": 1778469468055,
+            "modified": 1778877251895,
             "isPrivate": false,
             "description": "",
             "sortKey": -1777135013984.5
@@ -724,7 +841,7 @@
           ],
           "authentication": {
             "type": "bearer",
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg0NjkwODAsImV4cCI6MTc3ODQ3MjY4MH0.BcxWRldxiq2yCajjcsdgcjox-zVRA5EHuSIQQtGi1h4",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg4NzcyMzEsImV4cCI6MTc3ODg4MDgzMX0.8XjLmAJty92PUgzyx4c_VTKAzJivpR82Et97ASjTsSo",
             "prefix": "Bearer"
           },
           "settings": {
@@ -745,8 +862,8 @@
       "meta": {
         "id": "fld_7d6741e664b140468a43d541e5ffdd14",
         "created": 1778469548735,
-        "modified": 1778469563124,
-        "sortKey": -1777136067592.9062,
+        "modified": 1778877860377,
+        "sortKey": -1777136158458.418,
         "description": ""
       },
       "children": [
@@ -756,7 +873,7 @@
           "meta": {
             "id": "req_6b6980055f5547f6bcfffd777939f2dd",
             "created": 1778469570323,
-            "modified": 1778470283377,
+            "modified": 1778877021679,
             "isPrivate": false,
             "description": "",
             "sortKey": -1778469570323
@@ -772,7 +889,7 @@
           ],
           "authentication": {
             "type": "bearer",
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg0NjkwODAsImV4cCI6MTc3ODQ3MjY4MH0.BcxWRldxiq2yCajjcsdgcjox-zVRA5EHuSIQQtGi1h4",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg4NzcwMDEsImV4cCI6MTc3ODg4MDYwMX0.ZUqmnkGUsJQoSNki9MZ5-o2NnHekYGnVzUoTeS_8ZuA",
             "prefix": "Bearer"
           },
           "settings": {
@@ -846,6 +963,345 @@
             "type": "bearer",
             "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwMjM5M2FkMC0xZTU2LTQ3ZGEtYjY0My0yYmQ1ZDA0OGJkY2QiLCJpYXQiOjE3Nzg0NjYzOTgsImV4cCI6MTc3ODQ2OTk5OH0.5h_JnslPf5chA48omHHdD3hvncsDwTKBO5hA40FkYPw",
             "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        }
+      ]
+    },
+    {
+      "name": "Temporadas",
+      "meta": {
+        "id": "fld_4fbc1274e6cb481690c7fee495d84d12",
+        "created": 1778877855281,
+        "modified": 1778877859054,
+        "sortKey": -1777136128169.914,
+        "description": ""
+      },
+      "children": [
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/seasons",
+          "name": "Criar corretamente nova temporada",
+          "meta": {
+            "id": "req_6ed024a8986f4e6da68c1b2ae6583a59",
+            "created": 1778877865713,
+            "modified": 1778878622164,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1778877865713
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"id\": \"UUID\",\n  \"name\": \"Season nova\",\n  \"description\": \"string\",\n  \"startDate\": \"01 04 2027\",\n  \"endDate\": \"03 10 2027\",\n  \"isActive\": \"true\",\n  \"pointsPerCheckIn\": \"10\",\n  \"createdAt\": \"\",\n  \"updatedAt\": \"\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg4Nzg0NDQsImV4cCI6MTc3ODg4MjA0NH0.wtU9Jc4Cb0cF2ijCLiBoafMD_E3tC7FfdiRf_oF6ggs",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/seasons",
+          "name": "Criar nova temporada - Formatação incorreta de data",
+          "meta": {
+            "id": "req_cd5170e0391d4b9b855177eeaf137b09",
+            "created": 1778878718138,
+            "modified": 1778878725670,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1778673718018
+          },
+          "method": "POST",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n  \"id\": \"UUID\",\n  \"name\": \"Season nova\",\n  \"description\": \"string\",\n  \"startDate\": \"01042027\",\n  \"endDate\": \"03102027\",\n  \"isActive\": \"true\",\n  \"pointsPerCheckIn\": \"10\",\n  \"createdAt\": \"\",\n  \"updatedAt\": \"\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg4Nzg0NDQsImV4cCI6MTc3ODg4MjA0NH0.wtU9Jc4Cb0cF2ijCLiBoafMD_E3tC7FfdiRf_oF6ggs",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/seasons/api/seasons/a2a4ec09-36fd-425e-8006-9017264f8997",
+          "name": "Deletar temporada - Admin",
+          "meta": {
+            "id": "req_75532c4a7de94b2ab82614c0a3c4f7ff",
+            "created": 1778878812012,
+            "modified": 1778879233398,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1778673717918
+          },
+          "method": "DELETE",
+          "headers": [
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg4Nzg4ODUsImV4cCI6MTc3ODg4MjQ4NX0.bCrsReQkgddSHnXAmVnuNkwZfrirE1D9-idnDEjHt8Y",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/seasons/api/seasons/a2a4ec09-36fd-425e-8006-9017264f8997",
+          "name": "Deletar temporada - Membro",
+          "meta": {
+            "id": "req_88c7c9673fab4cd18a1855f3f41febeb",
+            "created": 1778878945372,
+            "modified": 1778879240490,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1778571644120.5
+          },
+          "method": "DELETE",
+          "headers": [
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYWViMDVjYi1iNmY5LTQ0ZDAtYTFjMC1lMzczNWM1ZGNkNzkiLCJpYXQiOjE3Nzg4Nzg5NTEsImV4cCI6MTc3ODg4MjU1MX0.or-K7SC6uKhrNl6YM0RniHjYcGs6zsks1hK1MbffXMA",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/seasons/a482dac3-d0b1-422a-a2d0-54bd1d5a805e",
+          "name": "Alterar nome - Admin",
+          "meta": {
+            "id": "req_e9ade7029bf64f0f9518c729786136c6",
+            "created": 1778879004212,
+            "modified": 1778879139475,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1778571644020.5
+          },
+          "method": "PUT",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n    \"name\": \"Nome novo\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg4Nzg4ODUsImV4cCI6MTc3ODg4MjQ4NX0.bCrsReQkgddSHnXAmVnuNkwZfrirE1D9-idnDEjHt8Y",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/seasons/a482dac3-d0b1-422a-a2d0-54bd1d5a805e",
+          "name": "Alterar nome - Membro",
+          "meta": {
+            "id": "req_727aa50ff9f648839388a7ffd8e9fb56",
+            "created": 1778879148877,
+            "modified": 1778879165839,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1778520607171.75
+          },
+          "method": "PUT",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n    \"name\": \"Nome novo\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiYWViMDVjYi1iNmY5LTQ0ZDAtYTFjMC1lMzczNWM1ZGNkNzkiLCJpYXQiOjE3Nzg4Nzg5NTEsImV4cCI6MTc3ODg4MjU1MX0.or-K7SC6uKhrNl6YM0RniHjYcGs6zsks1hK1MbffXMA",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/seasons/a482dac3-d0b1-422a-a2d0-54bd1d5a805e",
+          "name": "Consultar temporada",
+          "meta": {
+            "id": "req_4fc2e074401e4c8b9be7c9028f5ae3eb",
+            "created": 1778879197513,
+            "modified": 1778879430138,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1778520607071.75
+          },
+          "method": "GET",
+          "headers": [
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg4Nzg4ODUsImV4cCI6MTc3ODg4MjQ4NX0.bCrsReQkgddSHnXAmVnuNkwZfrirE1D9-idnDEjHt8Y",
+            "prefix": "Bearer"
+          },
+          "settings": {
+            "renderRequestBody": true,
+            "encodeUrl": true,
+            "followRedirects": "global",
+            "cookies": {
+              "send": true,
+              "store": true
+            },
+            "rebuildPath": true
+          }
+        },
+        {
+          "url": "{{ _.NaSalinha.base_url }}/api/seasons/a482dac3-d0b1-422a-a2d0-54bd1d5a805e/toggle-active",
+          "name": "New Request",
+          "meta": {
+            "id": "req_3562c8f491fd4641acc3afd5c061c738",
+            "created": 1778879449641,
+            "modified": 1778879557498,
+            "isPrivate": false,
+            "description": "",
+            "sortKey": -1778520607121.75
+          },
+          "method": "PATCH",
+          "body": {
+            "mimeType": "application/json",
+            "text": "{\n    \"name\": \"Temporada Nome Alterado pela API\"\n}"
+          },
+          "headers": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "User-Agent",
+              "value": "insomnia/12.5.0",
+              "description": "",
+              "disabled": false
+            }
+          ],
+          "authentication": {
+            "type": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJiMmYyMzdlNy1jOGRmLTRkZDYtODdiZS02OWY4MjUzOTM0YjgiLCJpYXQiOjE3Nzg4Nzg4ODUsImV4cCI6MTc3ODg4MjQ4NX0.bCrsReQkgddSHnXAmVnuNkwZfrirE1D9-idnDEjHt8Y"
           },
           "settings": {
             "renderRequestBody": true,
