@@ -100,7 +100,7 @@ A tabela abaixo consolida os cenários de testes executados especificamente no f
 
 ## 2. Detalhamento dos Bug Reports
 
-### Bug Report 10
+### Bug Report 1
 
 **Título:** Data Inválida na Criação de Temporada Retorna Ano 1970 via API
 
@@ -121,7 +121,7 @@ A tabela abaixo consolida os cenários de testes executados especificamente no f
 
 ---
 
-### Bug Report 11
+### Bug Report 2
 
 **Título:** Multiplicidade de Temporadas Ativas Simultaneamente no Frontend via Criação por API
 

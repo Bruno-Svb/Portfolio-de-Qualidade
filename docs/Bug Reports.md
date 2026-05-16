@@ -189,3 +189,29 @@
 **Análise de Causa Raiz (RCA):** A lógica de controle de data analisa apenas se o dia civil mudou ou carece totalmente de uma comparação matemática detalhada de timestamps (subtração entre o horário atual e o horário do último check-in para verificar se o resultado é menor que 86400 segundos).
 
 **Severidade:** Alta
+
+---
+
+### Bug Report 10
+
+**Título:** Acesso ao Ranking Bloqueado para Membros – Regra de RBAC Restritiva de Forma Incorreta
+
+**Localização do Erro:** Backend (API)
+
+**Passos para reproduzir:** 
+> 1. Autenticar no sistema com uma conta de perfil **Membro** e obter o token JWT.
+> 2. Tentar acessar o endpoint de ranking via API: `GET /api/rankings`.
+> 3. Alternativamente, tentar acessar a página de ranking pelo navegador (Frontend).
+> 4. Repetir os passos 1 a 3 com uma conta de perfil **Trainee**.
+
+**Resultado esperado:** 
+> - **Membro:** Deve conseguir visualizar o ranking normalmente (Status 200 OK).
+> - **Trainee:** Deve ter o acesso bloqueado (Status 403 Forbidden).
+
+**Resultado atual:** 
+> - **Membro:** Recebe erro de permissão (Status 403 Forbidden) – **comportamento incorreto**.
+> - **Trainee:** Recebe erro de permissão (Status 403 Forbidden) – **comportamento correto**.
+
+**Análise de Causa Raiz (RCA):** O middleware de autorização ou a anotação de controle de acesso no endpoint `/api/rankings` está configurada com uma regra de permissão restritiva demais. Provavelmente, a condição atual permite apenas perfis `ADMIN`, quando deveria permitir `ADMIN` e `MEMBRO`. A verificação para `TRAINEE` está correta (bloqueio).
+
+**Severidade:** Média
