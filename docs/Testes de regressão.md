@@ -5,7 +5,7 @@
 ---
 
 ## TR-01: Validação de Duplicidade de Mídia no Check-in
-**Relacionado ao:** BUG-04 (Severidade Alta)  
+**Relacionado ao:** BUG-04 (Severidade Média)  
 **Objetivo:** Garantir que o backend impeça o reuso da mesma imagem para múltiplos check-ins do mesmo usuário, protegendo a integridade da gamificação.
 
 | Passo | Ação | Resultado Esperado |
@@ -18,7 +18,7 @@
 ---
 
 ## TR-02: Consistência de Saldo e Exclusão em Cascata (Admin)
-**Relacionado aos:** BUG-08 (Severidade Alta)  
+**Relacionado aos:** BUG-08 (Severidade Média)  
 **Objetivo:** Verificar se a exclusão de um check-in pelo Administrador remove corretamente os dados órfãos na tabela de pontos e atualiza o ranking.
 
 | Passo | Ação | Resultado Esperado |
@@ -32,7 +32,7 @@
 ---
 
 ## TR-03: Autorização de Acesso ao Ranking (RBAC)
-**Relacionado ao:** BUG-11 (Severidade Alta)  
+**Relacionado ao:** BUG-10 (Severidade Alta)  
 **Objetivo:** Validar se as permissões de acesso (Role-Based Access Control) estão configuradas corretamente para permitir que Membros e Admins visualizem o ranking, bloqueando Trainees.
 
 | Passo | Ação | Resultado Esperado |

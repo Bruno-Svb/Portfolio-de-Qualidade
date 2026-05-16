@@ -16,7 +16,7 @@ A tabela abaixo detalha o balanço de testes para cada uma das funcionalidades f
 | **Módulo 3: Pontuação e Ranking** | 7 | 7 | 1 | 6 | **6** |
 | **TOTAL** | **19** | **19** | **9** | **10** | **10** |
 
-* **Descrição e Análise:** O plano de testes cobriu um total de 18 cenários estratégicos divididos igualmente entre os três blocos centrais. A execução resultou em uma taxa de falha de aproximadamente **52%**, indicando uma fragilidade significativa nas regras de validação aplicadas no backend e na comunicação de estados na interface visual do usuário.
+* **Descrição e Análise:** O plano de testes cobriu um total de 19 cenários estratégicos divididos igualmente entre os três blocos centrais. A execução resultou em uma taxa de falha de aproximadamente **52%**, indicando uma fragilidade significativa nas regras de validação aplicadas no backend e na comunicação de estados na interface visual do usuário.
 
 ---
 
